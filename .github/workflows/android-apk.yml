@@ -1,4 +1,5 @@
 
+
 name: Build Zaid Jarvis APK
 
 on:
@@ -55,4 +56,9 @@ jobs:
           path: zaid-jarvis/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
           retention-days: 14
+      - name: Accept Android SDK licenses and install SDK 36
+        run: |
+              yes | sdkmanager --licenses >/dev/null 2>&1 || true
+                sdkmanager --update
+                sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 
