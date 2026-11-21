@@ -1,0 +1,13 @@
+# Zaid Jarvis — never commit secrets, keys, or keystores.
+*.apk
+*.aab
+*.jks
+*.keystore
+local.properties
+keystore.properties
+.gradle/
+build/
+**/build/
+.idea/
+*.iml
+.DS_Store
